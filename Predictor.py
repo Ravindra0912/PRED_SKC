@@ -77,6 +77,7 @@ def send():
         delta = l_date - f_date
         days = delta.days
         pred_label = prediction(category, main_category, days, goal,description)
+        pred_label = pred_label.upper()
         return render_template('f1.html',pred = pred_label)
     return render_template('f1.html')
 
